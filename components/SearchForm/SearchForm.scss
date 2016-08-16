@@ -1,0 +1,31 @@
+@import '../../sass/_component';
+
+.search-form {
+	@include clearfix;
+	height: 40px;
+
+	&__field {
+		float: left;
+		appearance: none;
+		border: 0;
+		height: 100%;
+		width: calc( 100% - 60px );
+		border: 1px solid rgba( 0, 0, 0, .2 );
+		padding: 0 0 0 15px;
+		background-color: rgba( 0, 0, 0, .1 );
+	}
+
+	&__button {
+		float: left;
+		appearance: none;
+		border: 0;
+		height: 100%;
+		width: 60px;
+		border: 1px solid rgba( 0, 0, 0, .2 );
+		border-left: 0;
+		padding: 0;
+		text-align: center;
+		background-color: $accent_color;
+		color: white;
+	}
+}

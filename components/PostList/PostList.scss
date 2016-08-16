@@ -1,0 +1,36 @@
+@import '../../sass/_component';
+
+.post {
+	background-color: white;
+	padding: $gutter_width;
+	margin-bottom: $gutter_width;
+	@include clearfix;
+
+	&__title {
+		margin-bottom: $gutter_width;
+	}
+
+	&__image {
+		display: block;
+		width: auto;
+		height: auto;
+		margin-bottom: $gutter_width / 2;
+
+		@media ( min-width: $desktop_min ) {
+			float: left;
+			margin: 0 ( $gutter_width / 2 ) ( $gutter_width / 2 ) 0;
+		}
+	}
+
+	&__excerpt {
+		p {
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+	}
+
+	a {
+		text-decoration: none;
+	}
+}

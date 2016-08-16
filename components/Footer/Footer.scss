@@ -1,0 +1,20 @@
+@import '../../sass/_component';
+
+.footer {
+	background-color: $bg_color_alt;
+	padding-top: $gutter_width;
+	padding-bottom: $gutter_width;
+
+	&__logo {
+		text-align: center;
+		margin-bottom: $gutter_width;
+	}
+
+	&__nav {
+		margin-bottom: $gutter_width;
+	}
+
+	@media ( min-width: $desktop_min ) {
+		padding: $gutter_width;
+	}
+}

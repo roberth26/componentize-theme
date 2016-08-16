@@ -1,0 +1,40 @@
+@import '../../sass/_component';
+
+.feature-block {
+	@include clearfix;
+	background-color: $accent_color;
+	padding: $gutter_width ( $gutter_width / 2 );
+	margin: 0 ( $gutter_width / 2 * -1 ) $gutter_width ( $gutter_width / 2 * -1 );
+
+	@media ( min-width: $desktop_min ) {
+		margin: 0 0 $gutter_width 0;
+		padding: $gutter_width;
+	}
+
+	&__title {
+		color: white;
+		margin-bottom: $gutter_width;
+	}
+
+	&__image {
+		display: block;
+		margin: 0 0 ( $gutter_width / 2 ) 0;
+		max-width: 100%;
+
+		@media ( min-width: $desktop_min ) {
+			float: left;
+			width: 40%;
+			max-width: 640px;
+			margin: 0 ( $gutter_width / 2 ) ( $gutter_width / 2) 0;
+		}
+	}
+	
+	&__excerpt {
+		color: white;
+		margin: 0;
+	}
+
+	&--alt {
+		background-color: rgb( 255, 160, 0 );
+	}
+}

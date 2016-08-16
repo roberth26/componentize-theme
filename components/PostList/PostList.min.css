@@ -1,0 +1,1 @@
+.post{background-color:white;padding:30px;margin-bottom:30px}.post:after{content:'';display:table;clear:both}.post__title{margin-bottom:30px}.post__image{display:block;width:auto;height:auto;margin-bottom:15px}@media (min-width: 769px){.post__image{float:left;margin:0 15px 15px 0}}.post__excerpt p:last-of-type{margin:0}.post a{text-decoration:none}

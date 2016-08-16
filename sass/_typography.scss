@@ -1,0 +1,66 @@
+/*
+    Set the root element font size to 10px via percentage
+
+    - This will allow any child elements to to use REM units
+    for their font sizes, and they will be based off a clean
+    10px starting point. IE 1.6rem = 16px
+*/
+html {
+    font-size: 62.5%; // 10px
+    font-family: 'verdana';
+}
+
+// base font styles
+body {
+	font-size: 1.6rem; // 16px
+	font-weight: normal;
+	line-height: 1;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 1.6rem;
+    margin-bottom: $gutter_width;
+    color: rgb( 80, 80, 80 );
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+b {
+    font-size: inherit;
+    line-height: normal;
+    font-weight: bold;
+    color: inherit;
+}
+
+h1 {
+	font-size: 2.8rem;
+	text-transform: uppercase;
+	font-weight: bold;
+    color: rgb( 80, 80, 80 );
+}
+
+h2 {
+	font-size: 2.4rem;
+	font-weight: bold;
+    color: rgb( 80, 80, 80 );
+}
+
+h3 {
+	font-size: 2.2rem;
+    color: rgb( 80, 80, 80 );
+}
+
+h4 {
+	font-size: 2rem;
+    color: rgb( 80, 80, 80 );
+}
+
+h5 {
+	font-size: 1.8rem;
+    color: rgb( 80, 80, 80 );
+}

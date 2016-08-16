@@ -1,0 +1,41 @@
+@import '../../sass/_component';
+
+.hero {
+	background-color: $bg_color_alt;
+	height: 200px;
+	position: relative;
+
+	&--tall {
+		height: 300px;
+	}
+
+	&__content {
+		@extend %container;
+		@include center_vertical;
+		left: 0;
+		right: 0;
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		font-size: 2rem;
+
+		@media ( min-width: $desktop_min ) {
+			font-size: 3.2rem;
+		}
+	}
+
+	&__subtitle {
+		opacity: .7;
+		font-weight: normal;
+		font-size: 1.6rem;
+
+		@media ( min-width: $desktop_min ) {
+			font-size: 2.4rem;
+		}
+	}
+
+	@media ( min-width: $desktop_min ) {
+		margin-bottom: $gutter_width;
+	}
+}

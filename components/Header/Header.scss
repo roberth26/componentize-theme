@@ -1,0 +1,40 @@
+@import '../../sass/_component';
+
+.header {
+	background-color: $accent_color;
+	padding: $gutter_width 0;
+
+	@media ( min-width: $desktop_min ) {
+		height: 100px;
+		padding: 0;
+	}
+
+	&__container {
+		@extend %container;
+		position: relative;
+		height: 100%;
+	}
+
+	&__logo-link {
+		text-decoration: none;
+	}
+
+	&__logo {
+		color: white;
+		margin-bottom: 15px;
+
+		@media ( min-width: $desktop_min ) {
+			float: left;
+			height: 100%;
+			line-height: 100px;
+			margin-bottom: 0;
+		}
+	}
+
+	&__nav {
+		@media ( min-width: $desktop_min ) {
+			@include center_vertical();
+			right: ( $gutter_width / 2 );
+		}
+	}
+}

@@ -1,0 +1,77 @@
+@import '../../sass/_component';
+
+.menu {
+	@include clearfix;
+
+	&__item {
+		float: left;
+		margin-right: $gutter_width / 2;
+		
+		@media ( min-width: $desktop_min ) {
+			margin-right: 0;
+			margin-left: $gutter_width;
+		}
+
+		a {
+			color: white;
+			opacity: .6;
+			text-decoration: none;
+			transition: all .25s ease;
+
+			&:hover,
+			&:active {
+				opacity: 1;
+			}
+		}
+
+		&--current {
+			a {
+				opacity: 1;
+			}
+		}
+	}
+
+	&--vertical {
+		.menu__item {
+			float: none !important;
+			display: block !important;
+			margin: 0 0 10px 0;
+		}
+	}
+
+	&--center {
+		text-align: center;
+
+		.menu__item {
+			text-align: center;
+			float: none;
+			display: inline-block;
+		}
+	}
+
+	&--dark {
+		a {
+			color: rgb( 100, 100, 100 );
+		}
+	}
+
+	&--icon {
+		.menu__item {
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+
+		.icon {
+			height: 32px;
+			fill: inherit;
+			transition: all .25s ease;
+		}
+
+		a:hover,
+		a:active {
+			.icon {
+				fill: $accent_color;
+			}
+		}
+	}
+}

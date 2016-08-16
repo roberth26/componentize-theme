@@ -1,0 +1,17 @@
+@import '_reset';
+@import '_variables';
+@import '_mixins';
+@import '_typography';
+@import '_grid';
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: $bg_color_alt;
+}
+
+body {
+	background-color: $bg_color;
+}

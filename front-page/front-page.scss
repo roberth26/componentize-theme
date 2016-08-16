@@ -1,0 +1,25 @@
+@import '../sass/_component';
+
+.features {
+	@extend %row;
+	margin-bottom: 30px;
+	border-bottom: 1px solid lightgrey;
+
+	p {
+		text-align: left;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+
+		@media ( min-width: $desktop_min ) {
+			text-align: center;
+		}
+	}
+
+	&__item {
+		@extend %col-12-mobile;
+		@extend %col-4-desktop;
+		margin-bottom: $gutter_width;
+	}
+}

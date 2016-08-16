@@ -1,0 +1,9 @@
+@import '../sass/_component';
+
+main {
+	margin-top: $gutter_width;
+
+	@media ( min-width: $desktop_min ) {
+		margin: 0;
+	}
+}
