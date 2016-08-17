@@ -7,4 +7,6 @@ add_action( 'widgets_init', function() {
 		'after_widget'  => '</div>'
 	));
 });
+
+add_filter( 'widget_text', 'do_shortcode' );
 ?>
