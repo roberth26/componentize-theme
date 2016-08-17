@@ -13,9 +13,21 @@ class Icon extends AbstractComponent {
 			'width' => '',
 			'height' => ''
 		));
+		// cache the svg files
+		$this->svgs = array();
 	}
 	function render( $props ) {
-		$svg = simplexml_load_file( get_component_directory( __FILE__ ) . '/svg/' . $props[ 'icon' ] . '.svg' );
+		$svg = null;
+		if ( array_key_exists( $props[ 'icon' ], $this->svgs ) ) {
+			// load from cache
+			$svg = simplexml_load_string( $this->svgs[ $props[ 'icon' ] ] );
+		} else {
+			// load from file
+			$svg_file = file_get_contents( get_component_directory( __FILE__ ) . '/svg/' . $props[ 'icon' ] . '.svg' );
+			$this->svgs[ $props[ 'icon' ] ]  = $svg_file;
+			$svg = simplexml_load_string( $svg_file );
+		}
+
 		$svg = dom_import_simplexml( $svg );
 
 		if ( strlen( $props[ 'class' ] ) ) {
