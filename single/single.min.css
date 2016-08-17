@@ -1,1 +1,1 @@
-.main{padding:30px 0}@media (min-width: 769px){.main{padding:30px;margin-bottom:30px;background-color:white}}.main h1{margin-bottom:30px}.main p:last-of-type{margin:0}
+.main{padding:30px 0}@media (min-width: 769px){.main{padding:30px;margin-bottom:30px;background-color:white}}.post:after{content:'';display:table;clear:both}.post__title{margin-bottom:30px}.post__image{display:block;width:auto;height:auto;margin-bottom:15px}@media (min-width: 769px){.post__image{float:left;margin:0 15px 15px 0}}.post__content p:last-of-type{margin:0}

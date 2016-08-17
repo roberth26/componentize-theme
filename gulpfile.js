@@ -7,7 +7,7 @@ var watch =        require( 'gulp-watch' );
 
 
 gulp.task( 'global-sass', function() {
-    return watch( 'sass/[!_]*.scss', { ignoreInitial: false } )
+    return watch( 'sass/*.scss', { ignoreInitial: false } )
 		.pipe(
 			sass( { outputStyle: 'compressed' } )
 				.on( 'error', sass.logError )

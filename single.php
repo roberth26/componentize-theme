@@ -22,8 +22,14 @@ render( 'Page', array(
 			<div class="row">
 				<div class="col-12-mobile col-8-desktop">
 					<main class="main">
-						<h1><?php the_title(); ?></h1>
-						<?php the_content(); ?>
+						<article class="post">
+							<h1 class="post__title"><?php the_title(); ?></h1>
+							<img class="post__image" width="200px" height="200px"
+								src="<?php echo wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ) )[ 0 ]; ?>" />
+							<div class="post__content">
+								<?php the_content(); ?>
+							</div>
+						</article>
 					</main>
 				</div>
 				<div class="col-12-mobile col-4-desktop">
