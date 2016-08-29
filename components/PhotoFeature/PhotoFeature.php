@@ -31,17 +31,17 @@ class PhotoFeature extends AbstractComponent {
 				}
 			}
 		?>
-		<section class="photo-feature">
-			<header class="photo-feature__header">
-				<h1 class="photo-feature__title">PhotoFeature</h1>
-				<h3 class="photo-feature__count">
+		<section class="<?php echo $this->get_css( 'block' ); ?>">
+			<header class="<?php echo $this->get_css( 'header' ); ?>">
+				<h1 class="<?php echo $this->get_css( 'title' ); ?>">PhotoFeature</h1>
+				<h3 class="<?php echo $this->get_css( 'count' ); ?>">
 					<span class="current-slide">1</span> of <span class="total-slides"><?php echo count( $images ); ?></span>
 				</h3>
 			</header>
-			<ul class="photo-feature__slider" style="display: none;">
+			<ul class="slider" style="display: none;">
 				<?php foreach( $images as $image ) : ?>
-					<li class="photo-feature__slide">
-						<img class="photo-feature__slide__image" src="<?php echo $image; ?>" />
+					<li class="slide">
+						<img class="<?php echo $this->get_css( 'image' ); ?>" src="<?php echo $image; ?>" />
 					</li>
 				<?php endforeach; ?>
 			</ul>

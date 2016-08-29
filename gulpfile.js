@@ -4,6 +4,8 @@ var rename =       require( 'gulp-rename' );
 var autoprefixer = require( 'gulp-autoprefixer' );
 var uglify =       require( 'gulp-uglify' );
 var watch =        require( 'gulp-watch' );
+var postcss =      require( 'gulp-postcss' );
+var browserify =   require( 'gulp-browserify' );
 
 
 gulp.task( 'global-sass', function() {
@@ -59,6 +61,8 @@ gulp.task( 'component-sass', function() {
 		).pipe(
 			autoprefixer()
 		).pipe(
+			postcss( [ require( 'postcss-modules' )])
+		).pipe(
 			rename({
 				suffix: '.min'
 			})
@@ -69,7 +73,9 @@ gulp.task( 'component-sass', function() {
 
 gulp.task( 'component-js', function( cb ) {
     return watch( [ 'components/**/*.js', '!components/**/*.min.js' ], { ignoreInitial: false } )
-		.pipe(
+    	.pipe(
+    		browserify()
+    	).pipe(
 			rename({
 				suffix: '.min'
 			})

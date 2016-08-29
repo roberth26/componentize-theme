@@ -77,6 +77,14 @@ abstract class AbstractComponent {
 		return $this->is_imported;
 	}
 
+	final public function set_css( $css ) {
+		$this->css = $css;
+	}
+
+	final public function get_css( $class ) {
+		return $this->css->$class;
+	}
+
 	private $name = 'Component';
 	private $default_props = array();
 	private $above_fold = true;
@@ -86,5 +94,6 @@ abstract class AbstractComponent {
 	private $scripts = array();
 	private $has_shortcode = false;
 	private $is_imported = false;
+	private $css = array();
 }
 ?>

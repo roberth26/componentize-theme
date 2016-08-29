@@ -1,7 +1,7 @@
 @import '../../sass/_component';
 @import url( 'https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.css' );
 
-.photo-feature {
+.block {
 	margin: 0 ( $gutter_width / 2 * -1 ) $gutter_width ( $gutter_width / 2 * -1 );
 	background-color: $accent_color;
 	padding-top: $gutter_width;
@@ -10,74 +10,74 @@
 		margin: 0 0 $gutter_width 0;
 	}
 
-	&__header {
-		@include clearfix;
-	}
-
-	&__title {
-		color: white;
-		font-size: 2.2rem;
-		margin: 0 0 ( $gutter_width / 2 ) ( $gutter_width / 2 ) !important;
-
-		@media ( min-width: $desktop_min ) {
-			margin: 0 $gutter_width $gutter_width $gutter_width !important;
-			float: left;
-			font-size: 2.8rem;
+	:global {
+		.bx-wrapper {
+			position: relative;
 		}
-	}
 
-	&__count {
-		color: white;
-		font-size: 2rem;
-		margin: 0 0 $gutter_width ( $gutter_width / 2 ) !important;
-
-		@media ( min-width: $desktop_min ) {
-			float: right;
-			line-height: 28px;
-			margin: 0 $gutter_width 0 0 !important;
-		}
-	}
-
-	&__slide {
-		&__image {
-			display: block;
+		.bx-controls {
+			@include center_vertical;
 			width: 100%;
 		}
-	}
 
-	.bx-wrapper {
-		position: relative;
-	}
+		.bx-controls-direction {
+			@include clearfix;
+		}
+		
+		.bx-prev,
+		.bx-next {
+			background-color: white;
+			padding: $gutter_width / 2;
+			color: rgb( 80, 80, 80 );
+			text-decoration: none;
+			opacity: .7;
+			transition: opacity .25s ease;
 
-	.bx-controls {
-		@include center_vertical;
-		width: 100%;
-	}
+			&:active,
+			&:hover {
+				opacity: 1;
+			}
+		}
 
-	.bx-controls-direction {
-		@include clearfix;
-	}
+		.bx-prev {
+			float: left;
+		}
 
-	.bx-prev,
-	.bx-next {
-		background-color: white;
-		padding: $gutter_width / 2;
-		color: rgb( 80, 80, 80 );
-		text-decoration: none;
-		opacity: .7;
-		transition: opacity .25s ease;
-
-		&:active,
-		&:hover {
-			opacity: 1;
+		.bx-next {
+			float: right;
 		}
 	}
+}
 
-	.bx-prev {
-		float: left;
-	}
+.header {
+	@include clearfix;
+}
 
-	.bx-next {
+.count {
+	color: white;
+	font-size: 2rem;
+	margin: 0 0 $gutter_width ( $gutter_width / 2 ) !important;
+
+	@media ( min-width: $desktop_min ) {
 		float: right;
+		line-height: 28px;
+		margin: 0 $gutter_width 0 0 !important;
+	}
+}
+
+.image {
+	display: block;
+	width: 100%;
+}
+
+.title {
+	color: white;
+	font-size: 2.2rem;
+	margin: 0 0 ( $gutter_width / 2 ) ( $gutter_width / 2 ) !important;
+
+	@media ( min-width: $desktop_min ) {
+		margin: 0 $gutter_width $gutter_width $gutter_width !important;
+		float: left;
+		font-size: 2.8rem;
 	}
 }
