@@ -30,10 +30,15 @@ class Icon extends AbstractComponent {
 
 		$svg = dom_import_simplexml( $svg );
 
-		if ( strlen( $props[ 'class' ] ) ) {
-			$class = $svg->getAttribute( 'class' );
-			$svg->setAttribute( 'class', $class . ' ' . $props[ 'class' ] );
-		}
+		$c = $this->get_classes();
+
+		$class = $svg->getAttribute( 'class' );
+		$class .= ' ' . $c[ 'icon' ];
+
+		if ( strlen( $props[ 'class' ] ) )
+			$class .= ' ' . $props[ 'class' ];
+
+		$svg->setAttribute( 'class', $class );
 
 		if ( strlen( $props[ 'width' ] ) ) {
 			$svg->setAttribute( 'width', $props[ 'width' ] );

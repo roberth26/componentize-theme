@@ -17,10 +17,11 @@ class Footer extends AbstractComponent {
 		import( 'Menu' );
 	}
 	function render( $props ) { ?>
-		<footer class="footer">
-			<div class="container">
-				<h1 class="footer__logo">Logo</h1>
-				<nav class="footer__nav">
+		<?php $c = $this->get_classes(); ?>
+		<footer class="<?= $c[ 'block' ]; ?>">
+			<div class="<?= $c[ 'container' ]; ?>">
+				<h1 class="<?= $c[ 'logo' ]; ?>">Logo</h1>
+				<nav class="<?= $c[ 'nav' ]; ?>">
 					<?php render( 'Menu', array(
 						'vertical' => true,
 						'center' => true,

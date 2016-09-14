@@ -68,7 +68,7 @@ add_action( 'init', function() {
 					// postcss modules
 					$postcss_module = str_replace( '.min.css', '.css.json', $asset[ 'path' ] );
 					if ( file_exists( $postcss_module ) ) {
-						$component->set_css( json_decode( file_get_contents( $postcss_module ) ) );
+						$component->set_classes( json_decode( file_get_contents( $postcss_module ), true ) );
 					}
 					break;
 				}

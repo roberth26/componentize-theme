@@ -13,10 +13,11 @@ class FeatureBlock extends AbstractComponent {
 		));
 	}
 	function render( $props ) { ?>
-		<div class="feature-block <?php if ( $props[ 'alt' ] ) echo 'feature-block--alt'; ?>">
-			<h2 class="feature-block__title"><?php echo $props[ 'title' ]; ?></h2>
-			<img class="feature-block__image" src="<?php echo $props[ 'image' ]; ?>" />
-			<p class="feature-block__excerpt">Donec eget mi lectus. Nulla condimentum purus quis justo convallis, vitae pharetra dolor facilisis. Nunc eu lacus enim. Quisque magna odio, semper sed consectetur at, auctor sit amet mi.</p>
+		<?php $c = $this->get_classes(); ?>
+		<div class="<?= $c[ 'block' ]; ?> <?php if ( $props[ 'alt' ] ) echo $c[ 'block--alt' ]; ?>">
+			<h2 class="<?= $c[ 'title' ]; ?>"><?php echo $props[ 'title' ]; ?></h2>
+			<img class="<?= $c[ 'image' ]; ?>" src="<?php echo $props[ 'image' ]; ?>" />
+			<p class="<?= $c[ 'excerpt' ]; ?>">Donec eget mi lectus. Nulla condimentum purus quis justo convallis, vitae pharetra dolor facilisis. Nunc eu lacus enim. Quisque magna odio, semper sed consectetur at, auctor sit amet mi.</p>
 		</div>
 	<?php }
 }

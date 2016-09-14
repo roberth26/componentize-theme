@@ -29,7 +29,9 @@ render( 'Page', array(
 					</main>
 				</div>
 				<div class="col-12-mobile col-4-desktop">
-					<?php render( 'Sidebar' ); ?>
+					<?php render( 'Sidebar', array(
+						'sidebar' => 'sidebar'
+					)); ?>
 				</div>
 			</div>
 		</div>

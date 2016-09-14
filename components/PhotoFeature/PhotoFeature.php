@@ -30,18 +30,19 @@ class PhotoFeature extends AbstractComponent {
 					$images[ $index ] = get_component_directory_uri( __FILE__ ) . '/img/' . basename( $image );
 				}
 			}
+			$c = $this->get_classes();
 		?>
-		<section class="<?php echo $this->get_css( 'block' ); ?>">
-			<header class="<?php echo $this->get_css( 'header' ); ?>">
-				<h1 class="<?php echo $this->get_css( 'title' ); ?>">PhotoFeature</h1>
-				<h3 class="<?php echo $this->get_css( 'count' ); ?>">
+		<section class="<?= $c[ 'block' ]; ?>">
+			<header class="<?= $c[ 'header' ]; ?>">
+				<h1 class="<?= $c[ 'title' ]; ?>">PhotoFeature</h1>
+				<h3 class="<?= $c[ 'count' ]; ?>">
 					<span class="current-slide">1</span> of <span class="total-slides"><?php echo count( $images ); ?></span>
 				</h3>
 			</header>
 			<ul class="slider" style="display: none;">
 				<?php foreach( $images as $image ) : ?>
-					<li class="slide">
-						<img class="<?php echo $this->get_css( 'image' ); ?>" src="<?php echo $image; ?>" />
+					<li class="<?= $c[ 'slide' ]; ?>">
+						<img class="<?= $c[ 'image' ]; ?>" src="<?php echo $image; ?>" />
 					</li>
 				<?php endforeach; ?>
 			</ul>

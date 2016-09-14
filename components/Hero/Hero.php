@@ -11,10 +11,11 @@ class Hero extends AbstractComponent {
 		));
 	}
 	function render( $props ) { ?>
-		<section class="hero <?php echo ( $props[ 'tall' ] ? 'hero--tall' : '' ); ?>">
-			<div class="hero__content">
-				<h1 class="hero__title"><?php echo $props[ 'title' ]; ?></h1>
-				<h2 class="hero__subtitle"><?php echo $props[ 'subtitle' ]; ?></h2>
+		<?php $c = $this->get_classes(); ?>
+		<section class="<?= $c[ 'block' ]; ?> <?php if ( $props[ 'tall' ] ) echo $c[ 'block--tall' ]; ?>">
+			<div class="<?= $c[ 'container' ]; ?>">
+				<h1 class="<?= $c[ 'title' ]; ?>"><?php echo $props[ 'title' ]; ?></h1>
+				<h2 class="<?= $c[ 'subtitle' ]; ?>"><?php echo $props[ 'subtitle' ]; ?></h2>
 			</div>
 		</section>
 	<?php }

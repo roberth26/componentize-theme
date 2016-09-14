@@ -77,12 +77,12 @@ abstract class AbstractComponent {
 		return $this->is_imported;
 	}
 
-	final public function set_css( $css ) {
-		$this->css = $css;
+	final public function set_classes( $classes ) {
+		$this->classes = $classes;
 	}
 
-	final public function get_css( $class ) {
-		return $this->css->$class;
+	final public function get_classes() {
+		return $this->classes;
 	}
 
 	private $name = 'Component';
@@ -94,6 +94,6 @@ abstract class AbstractComponent {
 	private $scripts = array();
 	private $has_shortcode = false;
 	private $is_imported = false;
-	private $css = array();
+	private $classes = array();
 }
 ?>

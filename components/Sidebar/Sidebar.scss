@@ -10,8 +10,10 @@
 		padding: $gutter_width;
 		margin: 0 0 $gutter_width 0;
 	}
+}
 
-	&__widget {
+:global {
+	.sidebar-widget {
 		margin-bottom: $gutter_width;
 
 		.widgettitle {
@@ -35,4 +37,3 @@
 		}
 	}
 }
-

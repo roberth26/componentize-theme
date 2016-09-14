@@ -3,7 +3,7 @@ add_action( 'widgets_init', function() {
 	register_sidebar( array(
 		'name'          => 'Sidebar',
 		'id'            => 'sidebar',
-		'before_widget' => '<div class="sidebar__widget">',
+		'before_widget' => '<div class="sidebar-widget">',
 		'after_widget'  => '</div>'
 	));
 });

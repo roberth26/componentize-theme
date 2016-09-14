@@ -16,12 +16,13 @@ class Header extends AbstractComponent {
 		import( 'Menu' );
 	}
 	function render( $props ) { ?>
-		<header class="header">
-			<div class="header__container">
-				<a class="header__logo-link" href="<?php echo get_home_url(); ?>">
-					<h1 class="header__logo">Logo</h1>
+		<?php $c = $this->get_classes(); ?>
+		<header class="<?= $c[ 'block' ]; ?>">
+			<div class="<?= $c[ 'container' ]; ?>">
+				<a class="<?= $c[ 'logo-link' ]; ?>" href="<?php echo get_home_url(); ?>">
+					<h1 class="<?= $c[ 'logo' ]; ?>">Logo</h1>
 				</a>
-				<nav class="header__nav">
+				<nav class="<?= $c[ 'nav' ]; ?>">
 					<?php render( 'Menu', array(
 						'menu_items' => $props[ 'menu_items' ],
 						'current_page_id' => $props[ 'current_page_id' ]
